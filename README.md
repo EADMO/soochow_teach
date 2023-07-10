@@ -24,9 +24,15 @@ git clone https://github.com/<user-ID>/soochow_teach.git
 # 切换到soochow_teach 目录下
 cd ./soochow_teach/
 
-# 运行python 虚拟环境
-$ python -m venv ./venv
-> .\venv\Scripts\activate     # for Windows
+# 创建并运行 python 虚拟环境
+python -m venv ./venv
+.\venv\Scripts\activate     # for Windows
+```
+
+安装依赖
+
+```bash
+(venv)$ pip install -r requirements.txt
 ```
 
 至此，你已经把环境弄好了
