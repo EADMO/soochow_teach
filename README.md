@@ -41,4 +41,6 @@ python -m venv ./venv
 
 *这一步不需要启动虚拟环境*
 
+首先点击 VsCode 左上角文件，打开对应的Soochow_Teach文件夹 (不是codes里的) _过程有点不好讲
+
 Vscode Ctrl + Shift + P  然后搜索 Python: Select Interpreter 点击那个带星号的（也就是之前的虚拟环境)
