@@ -86,7 +86,7 @@ def std(request):
 def tea(request):
     return render(request,'index_teacher.html')
 
-def register(request):
+def registerParse(request):
     try:
         username1=request.POST['username']
         password1=request.POST['password']
@@ -98,3 +98,5 @@ def register(request):
         return render(request,'success.html')
 def loginParse(request):
     return render(request,'none.html')
+def register(request):
+    return render(request,'register.html')
