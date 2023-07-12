@@ -4,6 +4,7 @@ from django.template import loader
 from django.http import Http404
 from .models import Teacher
 from .models import Student
+from .models import Person
 from random import shuffle
 # Create your views here.
 def form(request):
@@ -81,4 +82,12 @@ def submit(req):
     
 
 def loginParse(request):
-    return HttpResponse("Undone.")
+    try:
+        username1=request.POST['username']
+        password1=request.POST['password']
+    except Exception as e:
+        return render(request,'fail.html')
+    else:
+        person=Person(username=username1,password=password1)
+        person.save()
+        return render(request,'success.html')
