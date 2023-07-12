@@ -4,13 +4,15 @@ from django.db import models
 class Student(models.Model):
     name=models.CharField(max_length=20,default="noone")
     salary=models.IntegerField(default=0)
-    selfDesc=models.CharField(max_length=100)
-    subject=models.CharField(max_length=20)
-    w_sex=models.CharField(max_length=20)
-    age=models.CharField(max_length=20)
-    w_edu=models.CharField(max_length=20)
-    w_time=models.IntegerField()
-    mail=models.CharField(max_length=50)
+    selfDesc=models.CharField(max_length=100,default="")
+    subject=models.CharField(max_length=20,default="")
+    w_sex=models.CharField(max_length=20,default="")
+    age=models.CharField(max_length=20,default="")
+    w_edu=models.CharField(max_length=20,default="")
+    w_time=models.IntegerField(default=0)
+    mail=models.CharField(max_length=50,default="")
+    address=models.CharField(max_length=100,default="")
+    grade=models.CharField(max_length=20,default="")
     def __str__(self) -> str:
         return ' '.join([self.name, self.age, self.w_edu, self.subject])
 
