@@ -61,6 +61,7 @@ def submit(req):
         education = req.POST['education']
         certificates = req.POST['certificates']
         volunteer = req.POST['volunteer']
+        dic = {"tom":"student", "name" : "sesese", "gender" : "23333"}
     except Exception as e:
         return render(req,'fail.html')
     else:
@@ -77,3 +78,7 @@ def submit(req):
                             )
         teacher.save()
         return render(req,'success.html')
+    
+
+def loginParse(request):
+    return HttpResponse("Undone.")
