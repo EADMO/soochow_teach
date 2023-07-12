@@ -12,6 +12,7 @@ class Student(models.Model):
     w_time=models.IntegerField()
     mail=models.CharField(max_length=50)
     
+
 class Teacher(models.Model):
     name = models.CharField(max_length=20,default="Anonymous")
     salary = models.PositiveIntegerField(default=0)
@@ -21,3 +22,7 @@ class Teacher(models.Model):
     edu = models.CharField(max_length=20,default='Null')
     time = models.PositiveIntegerField()
     mail = models.CharField(max_length=30)
+    wechart_number=models.IntegerField()
+    phonenumber=models.IntegerField()
+    experience=models.CharField(max_length=50)
+    
