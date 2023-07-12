@@ -12,7 +12,8 @@ urlpatterns = [
     path('messageForm/', views.messageForm),
     path('selfForm/',views.selfFrom),
     path('sumbit/',views.submit, name = 'submit'),
-    path('loginParse/', views.loginParse, name = 'loginParse'),
+    path('register/', views.register, name = 'register'),
+    path('loginParse/',views.loginParse,name='loginParse'),
     path('stuIndex',views.std,name='std'),
     path('teaIndex',views.tea,name='tea'),
 ]
