@@ -11,5 +11,6 @@ urlpatterns = [
     path('message/<int:stuID>/', views.message),
     path('messageForm/', views.messageForm),
     path('selfForm/',views.selfFrom),
-    path('sumbit/',views.submit, name = 'submit')
+    path('sumbit/',views.submit, name = 'submit'),
+    path('loginParse/', views.loginParse, name = 'loginParse')
 ]
