@@ -30,3 +30,6 @@ class Teacher(models.Model):
     experience=models.CharField(max_length=50)
     def __str__(self) -> str:
         return ' '.join([self.name, self.edu, self.subjects])
+class Person(models.Model):
+    username=models.CharField(max_length=20,default="")
+    password=models.CharField(max_length=20,default="")
