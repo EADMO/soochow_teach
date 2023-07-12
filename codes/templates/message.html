@@ -1,14 +1,63 @@
-<!-- 详细学生需求信息展示页面 -->
-<!-- 含有传入变量 stu 
-    含有成员
-    name
-    salary
-    selfDesc
-    subject
-    w_sex
-    age
-    w_edu   (希望教育)
-    w_time  (希望时间 0 1 2 ... 分别代表 日 一 二)
-    mail
-    利用 {{ stu.name }} 的形式访问 整个东西会被替换成相应的值
--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rectangle
+        {
+            background-color:blanchedalmond;
+            color:black;
+            padding:1% 0 1% 5%;
+        }
+        .subject
+        {
+            line-height: 25px;
+            font-size: 25px;
+        }
+        .page
+        {
+            background-color: aliceblue;
+        }
+        .main
+        {
+            margin-top: 50px;
+            width:90%;
+            margin-left: 5%;
+            border-radius: 10px;
+            background-color: white;
+            padding-left: 1%;
+        }
+        .mytitle
+        {
+            font-weight: 100;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="rectangle">
+        <p class="subject">{{stu.name}}</p>
+        <p>立即沟通</p>
+    </div>
+    <div class="main">
+        <p class="mytitle"><br>期望的辅导时间</p>
+        <p>{{stu.w_time}}</p>
+        <p class="mytitle"><br>学生地点</p>
+        <p>{{stu.address}}</p> 
+        <p class="mytitle"><br>学生年级</p>
+        <p>{{stu.grade}}</p>
+        <p class="mytitle"><br>辅导科目</p>
+        <p>{{stu.subject}}</p>
+        <p class="mytitle"><br>期望价格</p>
+        <p>{{stu.salary}}</p>
+        <p class="mytitle"><br>性别要求</p>
+        <p>{{stu.w_sex}}</p>
+    </div>
+</div>
+</body>
+</html>
