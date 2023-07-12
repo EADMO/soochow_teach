@@ -80,6 +80,11 @@ def submit(req):
         teacher.save()
         return render(req,'success.html')
     
+def std(request):
+    return render(request,'index_student.html')
+
+def tea(request):
+    return render(request,'index_teacher.html')
 
 def loginParse(request):
     try:
