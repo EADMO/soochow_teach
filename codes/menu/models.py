@@ -11,7 +11,8 @@ class Student(models.Model):
     w_edu=models.CharField(max_length=20)
     w_time=models.IntegerField()
     mail=models.CharField(max_length=50)
-    
+    def __str__(self) -> str:
+        return ' '.join([self.name, self.age, self.w_edu, self.subject])
 
 class Teacher(models.Model):
     name = models.CharField(max_length=20,default="Anonymous")
@@ -25,4 +26,6 @@ class Teacher(models.Model):
     wechart_number=models.IntegerField()
     phonenumber=models.IntegerField()
     experience=models.CharField(max_length=50)
+    def __str__(self) -> str:
+        return ' '.join([self.name, self.age, self.edu, self.subject])
     
