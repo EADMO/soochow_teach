@@ -3,10 +3,13 @@ from django.urls import include, path
 from . import views
 urlpatterns = [
     path('form/',views.form),
-    path('', views.index),
+    path('', views.index,name='index'),
+    path('error/', views.loginError,name= 'loginErr'),
     path('404/',views.Err404),
-    path('login', views.login),
+    path('login', views.login,name='login'),
+    path('loginError', views.loginError),
     path('message/<int:stuID>/', views.message),
     path('messageForm/', views.messageForm),
-    path('selfForm/',views.selfFrom)
+    path('selfForm/',views.selfFrom),
+    path('sumbit/',views.submit, name = 'submit')
 ]
