@@ -49,7 +49,7 @@ Vscode Ctrl + Shift + P  然后搜索 Python: Select Interpreter 点击那个带
 
 到自己fork的仓库里 点sync 确认同步
 
-然后回到自己的那个目录底下 e.g. D:\Prog>
+然后回到自己的那个目录底下 e.g. D:\Prog\soochow_teach>
 
 输入
 
