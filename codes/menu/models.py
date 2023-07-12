@@ -29,5 +29,4 @@ class Teacher(models.Model):
     phonenumber=models.IntegerField()
     experience=models.CharField(max_length=50)
     def __str__(self) -> str:
-        return ' '.join([self.name, self.age, self.edu, self.subject])
-    
+        return ' '.join([self.name, self.edu, self.subjects])
