@@ -107,7 +107,14 @@ def stuSub(req):
         return render(req,'stuSuccess.html')
     
 def std(request):
-    return render(request,'index_student.html')
+    tea_list1 = Teacher.objects.all().values()[0]
+    tea_list2 = Teacher.objects.all().values()[1]
+    template = loader.get_template("index_student.html")
+    context = {
+        "tea_list1": tea_list1,
+        "tea_list2": tea_list2,
+    }
+    return HttpResponse(template.render(context, request))
 
 def tea(request):
     return render(request,'index.html')
