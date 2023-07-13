@@ -227,21 +227,21 @@
     <div class="card mt-3" style = "width:455px">
         <div class="card-body">
             <div class = "container one">
-                <h4 class = "">标题</h4>
+                <h4 class = "">{{stu_list1.id}}</h4>
                 <p class="text-success daohanglan2">100-200/h</p>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-secondary">学科</button>
-                <button type="button" class="btn btn-outline-secondary">性别</button>
-                <button type="button" class="btn btn-outline-secondary">学生年级</button>
-                <button type="button" class="btn btn-outline-secondary">辅导时间</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list1.subject}}</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list1.w_sex}}</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list1.grade}}</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list1.w_time}}</button>
             </div>
             <div class = "container mt-3 one">
                 <span class="border border-dark rounded-circle"></span>
                 <div>
-                    <p class="daohanglan1">你的名字</p>
-                    <p class="daohanglan1 text-black-50">请输入文本内容</p>
-                    <p class="text-black-50 daohanglan2">地点</p>
+                    <p class="daohanglan1"><a href="/message/{{stu_list1.id}}/">{{stu_list1.name}}</a></p>
+                    <p class="daohanglan1 text-black-50">{{stu_list1.selfDesc}}</p>
+                    <p class="text-black-50 daohanglan2">{{stu_list1.address}}</p>
                 </div>
             </div>
         </div>
@@ -250,21 +250,21 @@
     <div class="card mt-3 ms-3" style = "width:455px">
         <div class="card-body">
             <div class = "container one">
-                <h4 class = "">标题</h4>
+                <h4 class = "">{{stu_list2.id}}</h4>
                 <p class="text-success daohanglan2">100-200/h</p>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-secondary">学科</button>
-                <button type="button" class="btn btn-outline-secondary">性别</button>
-                <button type="button" class="btn btn-outline-secondary">学生年级</button>
-                <button type="button" class="btn btn-outline-secondary">辅导时间</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list2.subject}}</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list2.w_sex}}</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list2.grade}}</button>
+                <button type="button" class="btn btn-outline-secondary">{{stu_list2.w_time}}</button>
             </div>
             <div class = "container mt-3 one">
                 <span class="border border-dark rounded-circle"></span>
                 <div>
-                    <p class="daohanglan1">你的名字</p>
-                    <p class="daohanglan1 text-black-50">请输入文本内容</p>
-                    <p class="text-black-50 daohanglan2">地点</p>
+                    <p class="daohanglan1"><a href="/message/{{stu_list2.id}}/">{{stu_list2.name}}</a></p>
+                    <p class="daohanglan1 text-black-50">{{stu_list2.selfDesc}}</p>
+                    <p class="text-black-50 daohanglan2">{{stu_list2.address}}</p>
                 </div>
             </div>
         </div>
@@ -314,7 +314,7 @@
                 </div>
 
                 <div class="d-grid gap-3 one mb-4">
-                    <button type="button" class="btn btn-outline-info btn-block daohanglan4">简历查看</button>
+                    <a href="{% url 'selfForm' %}"><button type="button" class="btn btn-outline-info btn-block daohanglan4"> 简历填写</button></a>
                 </div>
 
                 <div class="d-grid gap-3 one mb-4">
