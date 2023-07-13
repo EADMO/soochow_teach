@@ -1,1 +1,145 @@
 <!-- 学生招聘老师信息填写页面(暂时不考虑是把) -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>编辑个人信息</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .form-row .form-group {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .form-row .form-group:last-child {
+      margin-right: 0;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      resize: vertical;
+    }
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .divider {
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <form action="{% url 'submit' %}" method="post">
+        {% csrf_token %}
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">姓名(可填小名)</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">性别</label>
+          <select id="gender" name="gender" required>
+            <option value="">请选择</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="birthday">生日</label>
+          <input type="date" id="birthday" name="birthday" required>
+        </div>
+        <div class="form-group">
+          <label for="wechat">年龄</label>
+          <input type="text" id="wechat" name="wechat" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="job-status">可提供薪资</label>
+          <input type="text" id="job-status" name="job-status" required>
+        </div>
+        <div class="form-group">
+          <label for="identity">期望的老师学历</label>
+          <input type="text" id="identity" name="identity" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">需求科目</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="gender">想要的老师性别</label>
+            <select id="gender" name="gender" required>
+              <option value="">请选择</option>
+              <option value="男">男</option>
+              <option value="女">女</option>
+            </select>
+          </div>
+      </div>
+      <div class="divider"></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="strengths">时间需求</label>
+          <textarea id="strengths" name="strengths" rows="4" required></textarea>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="education">学生自我描述</label>
+          <textarea id="education" name="education" rows="4" required></textarea>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <button type="submit">完成提交</button>
+        </div>
+        <div class="form-group">
+          <button type="button">取消</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
