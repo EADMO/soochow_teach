@@ -261,22 +261,21 @@
     <div class="card mt-3 bgcolor" style = "width:455px;">
         <div class="card-body">
             <div class = "container one">
-                <h4 class = "">标题</h4>
+                <h4 class = "">{{ tea_list1.id }}</h4>
                 <p class="text-success daohanglan2">期望薪资:100-200/h</p>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-secondary">学科</button>
-                <button type="button" class="btn btn-outline-secondary">性别</button>
-                <button type="button" class="btn btn-outline-secondary">专业</button>
-                <button type="button" class="btn btn-outline-secondary">年级</button>
-                <button type="button" class="btn btn-outline-secondary">辅导时间</button>
+                <button type="button" class="btn btn-outline-secondary">{{ tea_list1.subjects }}</button>
+                <button type="button" class="btn btn-outline-secondary">{{ tea_list1.sex }}</button>
+                <button type="button" class="btn btn-outline-secondary">{{ tea_list1.edu }}</button>
+                <button type="button" class="btn btn-outline-secondary">周 {{ tea_list1.time }}</button>
             </div>
             <div class = "container mt-3 one">
                 <span class="border border-dark rounded-circle"></span>
                 <div>
-                    <p class="daohanglan1">你的名字</p>
-                    <p class="daohanglan1 text-black-50">请输入文本内容</p>
-                    <p class="text-black-50 daohanglan6">所在地</p>
+                    <p class="daohanglan1">{{ tea_list1.name }}</p>
+                    <p class="daohanglan1 text-black-50">{{ tea_list1.selfDesc }}</p>
+                    <p class="text-black-50 daohanglan6">威海</p>
                 </div>
             </div>
         </div>
@@ -285,22 +284,21 @@
     <div class="card mt-3 bgcolor ms-3" style = "width:455px">
         <div class="card-body">
             <div class = "container one">
-                <h4 class = "">标题</h4>
+                <h4 class = "">{{ tea_list2.id }}</h4>
                 <p class="text-success daohanglan2">期望薪资:100-200/h</p>
             </div>
             <div>
-                <button type="button" class="btn btn-outline-secondary">学科</button>
-                <button type="button" class="btn btn-outline-secondary">性别</button>
-                <button type="button" class="btn btn-outline-secondary">专业</button>
-                <button type="button" class="btn btn-outline-secondary">年级</button>
-                <button type="button" class="btn btn-outline-secondary">辅导时间</button>
+                <button type="button" class="btn btn-outline-secondary">{{ tea_list2.subjects }}</button>
+                <button type="button" class="btn btn-outline-secondary">{{ tea_list2.sex }}</button>
+                <button type="button" class="btn btn-outline-secondary">{{ tea_list2.edu }}</button>
+                <button type="button" class="btn btn-outline-secondary">周 {{ tea_list2.time }}</button>
             </div>
             <div class = "container mt-3 one">
                 <span class="border border-dark rounded-circle"></span>
                 <div>
-                    <p class="daohanglan1">你的名字</p>
-                    <p class="daohanglan1 text-black-50">请输入文本内容</p>
-                    <p class="text-black-50 daohanglan6">所在地</p>
+                    <p class="daohanglan1">{{ tea_list2.name }}</p>
+                    <p class="daohanglan1 text-black-50">{{ tea_list2.selfDesc }}</p>
+                    <p class="text-black-50 daohanglan6">威海</p>
                 </div>
             </div>
         </div>
