@@ -65,7 +65,6 @@ def submit(req):
         education = req.POST['education']
         certificates = req.POST['certificates']
         volunteer = req.POST['volunteer']
-        dic = {"tom":"student", "name" : "sesese", "gender" : "23333"}
     except Exception as e:
         return render(req,'fail.html')
     else:
@@ -82,12 +81,36 @@ def submit(req):
                             )
         teacher.save()
         return render(req,'success.html')
+
+def stuSub(req):
+    try:
+        name = req.POST['name']
+        gender = req.POST['gender']
+        birthday = req.POST['birthday']
+        wechat = req.POST['wechat']
+        jobStatus = req.POST['job-status']
+        identity = req.POST['identity'] #学历
+        phone = req.POST['phone']
+        strengths = req.POST['strengths']
+        education = req.POST['education']
+    except Exception as e:
+        return render(req,'fail.html')
+    else:
+        s = Student(name = name,
+                            w_edu = identity,
+                            w_sex = gender,
+                            mail = wechat,
+                            grade = phone,
+                            address = education,
+                            )
+        s.save()
+        return render(req,'stuSuccess.html')
     
 def std(request):
     return render(request,'index_student.html')
 
 def tea(request):
-    return render(request,'index_teacher.html')
+    return render(request,'index.html')
 
 def registerParse(request):
     try:
@@ -103,11 +126,18 @@ def registerParse(request):
 def loginParse(request):
     username1=request.POST['username']
     password1=request.POST['password']
+    try:
+        sl = request.POST['select']
+    except:
+        sl = ''
+    if sl == 'Yesod':
+        return index(request) #Teacher
     # print(username1)
     # print(password1)
     # user=authenticate(request,username='zx',password='123')
     # if user is not None:
-    return index(request)
+    else:
+        return std(request)
     # else:
     #     return render(request,'fail.html')
     
