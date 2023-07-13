@@ -4,8 +4,9 @@ from django.template import loader
 from django.http import Http404
 from .models import Teacher
 from .models import Student
-from .models import Person
 from random import shuffle
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 # Create your views here.
 def form(request):
     template=loader.get_template('form.html')
@@ -93,10 +94,26 @@ def registerParse(request):
     except Exception as e:
         return render(request,'fail.html')
     else:
-        person=Person(username=username1,password=password1)
+        person=User(username=username1,password=password1)
         person.save()
         return render(request,'success.html')
+    
 def loginParse(request):
-    return render(request,'none.html')
+    username1=request.POST['username']
+    password1=request.POST['password']
+    # print(username1)
+    # print(password1)
+    # user=authenticate(request,username='zx',password='123')
+    # if user is not None:
+    return index_teacher(request)
+    # else:
+    #     return render(request,'fail.html')
+    
 def register(request):
     return render(request,'register.html')
+
+def index_teacher(request):
+    return render(request,'index_Teacher.html')
+
+def index_Student(request):
+    return render(request,'index_Student.html')
