@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+
+{% block header %}
+<style>
+.jiange
+{
+    margin:10px;
+}
+.len
+{
+    width: 70%;
+}
+
+.page
+{
+    background-color: rgb(234,245,248);
+}
+
+.one
+{
+    display: flex;
+}
+</style>
+<style>
+.leftjianju
+{
+    padding-left: 20px;
+}
+</style>
+
+<style>
+.daohanglan
+{
+    padding: 12px 300px;
+}
+</style>
+
+<style>
+.daohanglan1
+{
+    padding-left: 20px;
+}
+</style>
+
+<style>
+.daohanglan2
+{
+    padding-left: 120px;
+}
+</style>
+<style>
+.daohanglan3
+{
+    padding-left: 40px;
+}
+</style>
+<style>
+.daohanglan4
+{
+    padding-left: 247px;
+}
+</style>
+
+<style>
+.daohanglan5
+{
+    padding-right: 10px;
+}
+</style>
+
+<style>
+.daohanglan6
+{
+    padding-left: 230px;
+}
+</style>
+
+<style>
+.border {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    margin: 0px;
+}
+</style>
+
+<style>
+    .first
+    {
+        margin-top: 10px;
+        box-shadow: 0px 3px 5px 0px ;
+    }
+    .dix2
+{
+    width:21%;
+    position: fixed;
+    top:350px;
+    left:70%;
+    padding:0;
+    margin:50px;
+}
+.dix1
+{
+    width:22%;
+    position: fixed;
+    top:70px;
+    left:70%;
+    padding:0;
+}
+.line
+{
+    line-height: 10px;
+    width:10%;
+}
+</style>
+{% endblock %}
+
+ {% block title %}
+    <!-- TODO: 主页设计 在 base 基础之上 要有选择的页面-->
+    <!-- 直接访问默认的就可以看到主页 -->
+<div>
+
+</div>
+ {% endblock %}
+ {% block contents %}
+ <!-- {% for id,name,desc,count in questionnaires %} -->
+    <!-- <div class="card shadow mx-auto mb-2 mh-2 text-center" style="width: 24rem;height: auto;">
+        <img src="..." class="card-img-top" alt="..."> -->
+        <!-- <div class="card-body"> -->
+            <!-- <h4 class="card-title">{{ name }} (#{{ id }})</h5> -->
+            <!-- <p class="card-text">{{ desc }}</p> -->
+            <!-- <div class="mt-5 align-text-bottom text-muted">{{ count }}</div> -->
+            <!-- <a href="/questionnaire/{{ id }}" class="btn btn-primary stretched-link" style="width: 12rem;">开始填写</a> -->
+        <!-- </div> -->
+      <!-- </div>  -->
+ <!-- {% endfor %} -->
+ <body class="page">
+    <div class="navbar navbar-expand-sm bg-light len">
+        <div class="container one top">
+            <ul class="navbar-nav">
+                <h1 class = "text-primary">教到</h1>
+                <h1 class = "text-info leftjianju">JIAODAO</h1>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="card" style = "width:auto" >
+        <div class="card-body">
+            <div class = "container daohanglan1">
+                <nav class="navbar navbar-expand navbar-dark">
+                    <form class = "one" action="/action_page.php">
+                    <input class="form-control daohanglan" type="text">
+                    <button class="btn btn-primary line" type="submit">搜索</button>
+                    </form>
+                </nav>
+            </div>
+            <br>
+    
+    
+            <div class = "one">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">城市</button>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">苏州</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">南京</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">上海</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">北京</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">无锡</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">郑州</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">深圳</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">厦门</button>
+                </div>
+                <div id="demo" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">杭州</button>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class = "one">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo1">学科</button>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">语文</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">数学</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">英语</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">物理</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">化学</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">生物</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">历史</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">政治</button>
+                </div>
+                <div id="demo1" class="collapse">
+                    <button type="button" class="btn btn-outline-primary">地理</button>
+                </div>
+                
+            </div>
+            <br>
+            <br>
+            <div class="one">
+                <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo2">薪资</button>
+                <div id="demo2" class="collapse">
+                    <p style="font-weight: 700;margin-left: 30px;">薪资范围</p>
+                    <form style="margin-left:30px">
+                        <div class="row" style="height:10px">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="下限" name="lowest">
+                            </div>
+                            ——
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="上限" name="highest">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div>
+                <button type="button" class="btn btn-outline-secondary float-end">按薪资排序</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="card mt-3" style = "width:925px">
+        <div class="card-body">
+            <a href="#" style="margin-right: 30px;">精选家教</a>
+            <a href="#">最新家教</a>
+        </div>
+    </div>
+    <br>
+    <div class="card mt-3 bgcolor" style = "width:455px;">
+        <div class="card-body">
+            <div class = "container one">
+                <h4 class = "">标题</h4>
+                <p class="text-success daohanglan2">期望薪资:100-200/h</p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary">学科</button>
+                <button type="button" class="btn btn-outline-secondary">性别</button>
+                <button type="button" class="btn btn-outline-secondary">专业</button>
+                <button type="button" class="btn btn-outline-secondary">年级</button>
+                <button type="button" class="btn btn-outline-secondary">辅导时间</button>
+            </div>
+            <div class = "container mt-3 one">
+                <span class="border border-dark rounded-circle"></span>
+                <div>
+                    <p class="daohanglan1">你的名字</p>
+                    <p class="daohanglan1 text-black-50">请输入文本内容</p>
+                    <p class="text-black-50 daohanglan6">所在地</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3 bgcolor ms-3" style = "width:455px">
+        <div class="card-body">
+            <div class = "container one">
+                <h4 class = "">标题</h4>
+                <p class="text-success daohanglan2">期望薪资:100-200/h</p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-secondary">学科</button>
+                <button type="button" class="btn btn-outline-secondary">性别</button>
+                <button type="button" class="btn btn-outline-secondary">专业</button>
+                <button type="button" class="btn btn-outline-secondary">年级</button>
+                <button type="button" class="btn btn-outline-secondary">辅导时间</button>
+            </div>
+            <div class = "container mt-3 one">
+                <span class="border border-dark rounded-circle"></span>
+                <div>
+                    <p class="daohanglan1">你的名字</p>
+                    <p class="daohanglan1 text-black-50">请输入文本内容</p>
+                    <p class="text-black-50 daohanglan6">所在地</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+<div>
+    <div class="container ms-5 mb-3 dix1 first">
+        <div class="card float-md-end">
+            <div class="card-body">
+                <div class = "container mt-3 one">
+                    <span class="border border-dark rounded-circle"></span>
+                    <div>
+                        <p class="daohanglan1">姓名</p>
+                        <div class="one">
+                            <p class="daohanglan1 text-black-50">孩子年龄</p>
+                            <p class="daohanglan3 text-black-50">学校</p>
+                            <p class="daohanglan3 text-black-50">年级</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-3 one">
+                    <div class="card px-3 ms-2">
+                        <div class="card-body">0</div>
+                        <div>心仪老师</div>
+                    </div>
+                    <div class="card px-3 ms-5">
+                        <div class="card-body">0</div>
+                        <div>正在沟通</div>
+                    </div>
+                    <div class="card px-3 ms-5">
+                        <div class="card-body">0</div>
+                        <div>满意教学</div>
+                    </div>
+                </div>
+                <div style="margin-left: 120px;margin-top: 20px;" >
+                    <button class="btn btn-outline-primary">编辑心愿老师</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container ms-6 mb-3 daohanglan5 dix2 first">
+        <div class="card float-md-end">
+            <div class="card-body mb-3 ">
+                <div class="container mb-3">
+                    <h4>我的老师<h4>
+                </div>
+                <div class="d-grid gap-3 one mb-4">
+                    <button type="button" class="btn btn-outline-info btn-block daohanglan4">老师1</button>
+                </div>
+
+                <div class="d-grid gap-3 one mb-4">
+                    <button type="button" class="btn btn-outline-info btn-block daohanglan4">老师2</button>
+                </div>
+
+                <div class="d-grid gap-3 one mb-4">
+                    <button type="button" class="btn btn-outline-info btn-block daohanglan4">老师3</button>  
+                </div>
+
+                <div class="d-grid gap-3 one mb-4">
+                    <button type="button" class="btn btn-outline-info btn-block daohanglan4">其他老师</button>  
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+{% endblock %}
