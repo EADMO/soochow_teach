@@ -13,10 +13,12 @@ def form(request):
     return HttpResponse(template.render())
 
 def index(request):
-    stu_list = shuffle(Student.objects.all()[:4])
+    stu_list1 = Student.objects.all().values()[0]
+    stu_list2 = Student.objects.all().values()[1]
     template = loader.get_template("index.html")
     context = {
-        "stu_list": stu_list,
+        "stu_list1": stu_list1,
+        "stu_list2": stu_list2,
     }
     return HttpResponse(template.render(context, request))
 
@@ -37,7 +39,7 @@ def message(req,stuID):
         stu = Student.objects.get(pk = stuID)
     except Student.DoesNotExist:
         raise Http404("Student does not exist")
-    template = loader.get_template("index.html")
+    template = loader.get_template("message.html")
     context = {
         "stu": stu,
     }
@@ -105,7 +107,7 @@ def loginParse(request):
     # print(password1)
     # user=authenticate(request,username='zx',password='123')
     # if user is not None:
-    return index_teacher(request)
+    return index(request)
     # else:
     #     return render(request,'fail.html')
     
